@@ -11100,3 +11100,10 @@ a.text-dark:focus {
   }
 }
 
+#containerhome {
+  height: 600px;
+  width: 600px;
+  background-color: lightblue;
+  margin: auto;
+}
+

@@ -18,8 +18,17 @@ Route::get('/', function () {
 Route::get('/addcompany', function () {
     return view('addcompany');
 });
+Route::get('/pk1', function () {
+    return view('pk1');
+});
 
+Route::get('/pk2', function () {
+    return view('pk2');
+});
 
+Route::get('/pk3', function () {
+    return view('pk3');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
