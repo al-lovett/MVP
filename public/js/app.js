@@ -49368,11 +49368,11 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new Vue({
+new Vue({
   el: '#app'
 });
 Vue.component('companybio', {
-  template: "\n  <form>\n    <ul>\n      <li>1-Company Name <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>2-Contact Name <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>3-Address <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>4-Phone <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>5-Fax <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>6-Email <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n\n      <button> Submit </button>\n    </ul>\n  </form>\n  "
+  template: "\n  <form>\n    <textarea name=\"\" rows=\"1\" cols=\"25\">Company Name</textarea>\n    <br><br>\n    <textarea name=\"\" rows=\"1\" cols=\"25\">Contact Name</textarea>\n    <br><br>\n    <textarea name=\"\" rows=\"1\" cols=\"25\">Address</textarea>\n    <br><br>\n    <textarea name=\"\" rows=\"1\" cols=\"25\">Phone</textarea>\n    <br><br>\n    <textarea name=\"\" rows=\"1\" cols=\"25\">Fax</textarea>\n    <br><br>\n    <textarea name=\"\" rows=\"1\" cols=\"25\">Email</textarea>\n    <br><br>\n    <button> Submit </button>\n  </form>\n  "
 });
 
 /***/ }),

@@ -27,29 +27,28 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+new Vue({
     el: '#app',
+
 });
+
 
 Vue.component('companybio',{
   template: `
   <form>
-    <ul>
-      <li>1-Company Name <textarea name="" rows="1" cols="25"></textarea>
-      </li><br>
-      <li>2-Contact Name <textarea name="" rows="1" cols="25"></textarea>
-      </li><br>
-      <li>3-Address <textarea name="" rows="1" cols="25"></textarea>
-      </li><br>
-      <li>4-Phone <textarea name="" rows="1" cols="25"></textarea>
-      </li><br>
-      <li>5-Fax <textarea name="" rows="1" cols="25"></textarea>
-      </li><br>
-      <li>6-Email <textarea name="" rows="1" cols="25"></textarea>
-      </li><br>
-
-      <button> Submit </button>
-    </ul>
+    <textarea name="" rows="1" cols="25">Company Name</textarea>
+    <br><br>
+    <textarea name="" rows="1" cols="25">Contact Name</textarea>
+    <br><br>
+    <textarea name="" rows="1" cols="25">Address</textarea>
+    <br><br>
+    <textarea name="" rows="1" cols="25">Phone</textarea>
+    <br><br>
+    <textarea name="" rows="1" cols="25">Fax</textarea>
+    <br><br>
+    <textarea name="" rows="1" cols="25">Email</textarea>
+    <br><br>
+    <button> Submit </button>
   </form>
   `
-})
+});
