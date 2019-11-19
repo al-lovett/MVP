@@ -27,7 +27,7 @@
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Company Bio</h5>
-          <p class="card-text">Quick Cmpany Bio for Customers.</p>
+          <p class="card-text">Quick Company Bio for Customers.</p>
           <a href="/addcompany" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
@@ -35,20 +35,40 @@
         <div class="card-header">
             Featured
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Customer Package Selection</h5>
-          <p class="card-text">This should be dynamic depends on how to show the dropdown</p>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown button
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Package 1</a>
-              <a class="dropdown-item" href="#">Package 2</a>
-              <a class="dropdown-item" href="#">package 3</a>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Package 1 </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Service Breakdown</h6>
+                  <p class="card-text">1 foot job done</p>
+                  <a href="#" class="card-link">Add Company to quote or Bill</a>
+                  <a href="/home" class="card-link">Home</a>
+                </div>
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Package 2 </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Service Breakdown</h6>
+                  <p class="card-text">1 client more than one feet jobs done</p>
+                  <a href="#" class="card-link">Add Company to quote or Bill</a>
+                  <a href="/home" class="card-link">Home</a>
+                </div>
+            </div>
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Package 3 </h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Service Breakdown</h6>
+                  <p class="card-text">more than 1 client more than one feet jobs done</p>
+                  <a href="#" class="card-link">Add Company to quote or Bill</a>
+                  <a href="/home" class="card-link">Home</a>
+                </div>
             </div>
           </div>
         </div>
+    
       </div>
 
     </div>

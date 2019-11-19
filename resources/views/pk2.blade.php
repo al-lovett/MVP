@@ -10,9 +10,9 @@
       <div class="card-body">
         <h5 class="card-title">Package 2 </h5>
         <h6 class="card-subtitle mb-2 text-muted">Service Breakdown</h6>
-        <p class="card-text">1 client moore than one feet jobs done</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        <p class="card-text">1 client more than one feet jobs done</p>
+        <a href="#" class="card-link">Add Company to quote or Bill</a>
+        <a href="/home" class="card-link">Home</a>
       </div>
     </div>
   </body>

@@ -18,7 +18,19 @@ Vue.component('companybio',{
     <br><br>
     <textarea name="" rows="1" cols="25">Email</textarea>
     <br><br>
-    <button> Submit </button>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Package 1
+          </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Package 2
+          </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Package 3
+          </label>
+    </div>
+    <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
+
   </form>
   `
 });
