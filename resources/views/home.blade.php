@@ -26,8 +26,8 @@
       <div class="card" style="width: 18rem;" class="companynamecard">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 class="card-title">Company Bio</h5>
+          <p class="card-text">Quick Cmpany Bio for Customers.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
@@ -36,13 +36,17 @@
             Featured
         </div>
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <div class="dropdown-menu">
-            <span class="dropdown-item-text">Package Options</span>
-            <a class="dropdown-item" href="#">Package 1</a>
-            <a class="dropdown-item" href="#">Package 2</a>
-            <a class="dropdown-item" href="#">Package 3</a>
+          <h5 class="card-title">Customer Package Selection</h5>
+          <p class="card-text">This should be dynamic depends on how to show the dropdown</p>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Package 1</a>
+              <a class="dropdown-item" href="#">Package 2</a>
+              <a class="dropdown-item" href="#">package 3</a>
+            </div>
           </div>
         </div>
       </div>
