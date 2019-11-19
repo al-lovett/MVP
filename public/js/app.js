@@ -49371,6 +49371,9 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+Vue.component('companybio', {
+  template: "\n  <form>\n    <ul>\n      <li>1-Company Name <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>2-Contact Name <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>3-Address <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>4-Phone <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>5-Fax <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n      <li>6-Email <textarea name=\"\" rows=\"1\" cols=\"25\"></textarea>\n      </li><br>\n\n      <button> Submit </button>\n    </ul>\n  </form>\n  "
+});
 
 /***/ }),
 

@@ -28,7 +28,7 @@
         <div class="card-body">
           <h5 class="card-title">Company Bio</h5>
           <p class="card-text">Quick Cmpany Bio for Customers.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="/addcompany" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
       <div class="card">

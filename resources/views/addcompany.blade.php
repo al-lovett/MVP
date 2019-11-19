@@ -5,26 +5,16 @@
     <title>Add A Company</title>
   </head>
   <body>
-    <div class="app">
+    <div id="app">
+      <companybio></companybio>
 
-      <form>
-        <ul>
-          <li>1-Company Name <textarea name="" rows="1" cols="25"></textarea>
-          </li><br>
-          <li>2-Contact Name <textarea name="" rows="1" cols="25"></textarea>
-          </li><br>
-          <li>3-Address <textarea name="" rows="1" cols="25"></textarea>
-          </li><br>
-          <li>4-Phone <textarea name="" rows="1" cols="25"></textarea>
-          </li><br>
-          <li>5-Fax <textarea name="" rows="1" cols="25"></textarea>
-          </li><br>
-          <li>6-Email <textarea name="" rows="1" cols="25"></textarea>
-          </li><br>
 
-          <button> Submit </button>
-        </ul>
-      </form>
+
+
+
+
+
     </div>
+    <script type="text/javascript" src="{{  url('/js/app.js') }}"></script>
   </body>
 </html>
