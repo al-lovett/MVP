@@ -21,40 +21,44 @@
     </div>
 </div>
 <div class="container-fluid">
-  <div class="col-md-10" class="row justify-content-cente">
-    <div class="card">
+  <div class="col-md-10" >
+    <div class="card" class="row justify-content-cente">
       <div class="card" style="width: 100%;" class="companynamecard">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Company Bio</h5>
-          <p class="card-text">Quick Company Bio for Customers.</p>
-          <a href="/addcompany" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Quick Company Bio for Customers.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="/addcompany" class="btn btn-primary">Customer Quote or Billing Orders</a>
         </div>
       </div>
       <div class="card">
         <div class="card-header">
-            Featured
+            Featured Service Packages
         </div>
-        <div class="container">
-          <div class="row">
+        <div class="container-fluid" style="text-align: center">
+          <div>
+
             <div class="col-sm">
               <div class="card" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">Package 1 </h5>
                   <h6 class="card-subtitle mb-2 text-muted">Service Breakdown</h6>
                   <p class="card-text">1 foot job done</p>
-                  <a href="#" class="card-link">Add Company to quote or Bill</a>
-                  <a href="/home" class="card-link">Home</a>
+                  <a href="/pk1" class="card-link">More Details</a>
+
                 </div>
+              </div>
+            </div>
             <div class="col-sm">
               <div class="card" style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">Package 2 </h5>
                   <h6 class="card-subtitle mb-2 text-muted">Service Breakdown</h6>
                   <p class="card-text">1 client more than one feet jobs done</p>
-                  <a href="#" class="card-link">Add Company to quote or Bill</a>
-                  <a href="/home" class="card-link">Home</a>
+                  <a href="/pk2" class="card-link">More Details</a>
+
                 </div>
+              </div>
             </div>
             <div class="col-sm">
               <div class="card" style="width: 18rem;">
@@ -62,12 +66,12 @@
                   <h5 class="card-title">Package 3 </h5>
                   <h6 class="card-subtitle mb-2 text-muted">Service Breakdown</h6>
                   <p class="card-text">more than 1 client more than one feet jobs done</p>
-                  <a href="#" class="card-link">Add Company to quote or Bill</a>
-                  <a href="/home" class="card-link">Home</a>
+                  <a href="/pk3" class="card-link">More Details</a>
+                  
                 </div>
+              </div>
             </div>
-          </div>
-        </div>
+
 
       </div>
 
