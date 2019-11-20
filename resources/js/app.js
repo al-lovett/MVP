@@ -6,27 +6,27 @@ window.Vue = require('vue');
 Vue.component('companybio',{
   template: `
   <form>
-    <textarea name="" rows="1" cols="25">Company Name</textarea>
+    <textarea name="company_name" rows="1" cols="25">Company Name</textarea>
     <br><br>
-    <textarea name="" rows="1" cols="25">Contact Name</textarea>
+    <textarea name="contact_name" rows="1" cols="25">Contact Name</textarea>
     <br><br>
-    <textarea name="" rows="1" cols="25">Address</textarea>
+    <textarea name="address" rows="1" cols="25">Address</textarea>
     <br><br>
-    <textarea name="" rows="1" cols="25">Phone</textarea>
+    <textarea name="phone" rows="1" cols="25">Phone</textarea>
     <br><br>
-    <textarea name="" rows="1" cols="25">Fax</textarea>
+    <textarea name="fax" rows="1" cols="25">Fax</textarea>
     <br><br>
-    <textarea name="" rows="1" cols="25">Email</textarea>
+    <textarea name="email" rows="1" cols="25">Email</textarea>
     <br><br>
     <div class="btn-group btn-group-toggle" data-toggle="buttons">
       <label class="btn btn-secondary active">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked> Package 1
+        <input type="radio" name="package" id="1" autocomplete="off" checked> Package 1
           </label>
       <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option2" autocomplete="off"> Package 2
+        <input type="radio" name="package" id="2" autocomplete="off"> Package 2
           </label>
       <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option3" autocomplete="off"> Package 3
+        <input type="radio" name="package" id="3" autocomplete="off"> Package 3
           </label>
     </div>
     <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
