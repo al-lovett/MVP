@@ -11,9 +11,17 @@ class ServicesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function addQuote(Request $request)
     {
-        //
+      $quote = new Quote;
+      $quote->company_name = $request->company_name;
+      $quote->contact_name = $request->contact_name;
+      $quote->address = $request->address;
+      $quote->phone = $request->phone;
+      $quote->fax = $request->fax;
+      $quote->email = $request->email;
+      $quote->package = $request->package;
+      $quote->save()
     }
 
     /**
