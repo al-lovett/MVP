@@ -18,6 +18,9 @@ Route::get('/', function () {
 Route::get('/addcompany', function () {
     return view('addcompany');
 });
+
+Route::post('/add', 'ServicesController@addQuote');
+
 Route::get('/pk1', function () {
     return view('pk1');
 });

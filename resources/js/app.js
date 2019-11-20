@@ -6,19 +6,19 @@ window.Vue = require('vue');
 Vue.component('companybio',{
   template: `
   <form>
-    <textarea name="company_name" rows="1" cols="25">Company Name</textarea>
+    <textarea name="company_name" rows="1" cols="25" v-model="company_name">Company Name</textarea>
     <br><br>
-    <textarea name="contact_name" rows="1" cols="25">Contact Name</textarea>
+    <textarea name="contact_name" rows="1" cols="25" v-model="contact_name">Contact Name</textarea>
     <br><br>
-    <textarea name="address" rows="1" cols="25">Address</textarea>
+    <textarea name="address" rows="1" cols="25"v-model="address">Address</textarea>
     <br><br>
-    <textarea name="phone" rows="1" cols="25">Phone</textarea>
+    <textarea name="phone" rows="1" cols="25"v-model="phone">Phone</textarea>
     <br><br>
-    <textarea name="fax" rows="1" cols="25">Fax</textarea>
+    <textarea name="fax" rows="1" cols="25" v-model="fax">Fax</textarea>
     <br><br>
-    <textarea name="email" rows="1" cols="25">Email</textarea>
+    <textarea name="email" rows="1" cols="25" v-model="email">Email</textarea>
     <br><br>
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" v-model="package">
       <label class="btn btn-secondary active">
         <input type="radio" name="package" id="1" autocomplete="off" checked> Package 1
           </label>
@@ -33,6 +33,7 @@ Vue.component('companybio',{
 
   </form>
   `
+
 });
 new Vue({
     el: '#app',
