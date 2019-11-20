@@ -11,7 +11,17 @@ class ServicesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function addQuote(Request $request)
+    public function index (Request $request)
+    {
+
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create(Request $request)
     {
       $quote = new Quote;
       $quote->company_name = $request->company_name;
@@ -22,16 +32,6 @@ class ServicesController extends Controller
       $quote->email = $request->email;
       $quote->package = $request->package;
       $quote->save()
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**

@@ -6,17 +6,17 @@ window.Vue = require('vue');
 Vue.component('companybio',{
   template: `
   <form>
-    <textarea name="company_name" rows="1" cols="25" v-model="company_name">Company Name</textarea>
+    <textarea name="company_name" rows="1" cols="25" v-model="company_name" placeholder="Company Name"></textarea>
     <br><br>
-    <textarea name="contact_name" rows="1" cols="25" v-model="contact_name">Contact Name</textarea>
+    <textarea name="contact_name" rows="1" cols="25" v-model="contact_name" placeholder="Contact Name"></textarea>
     <br><br>
-    <textarea name="address" rows="1" cols="25"v-model="address">Address</textarea>
+    <textarea name="address" rows="1" cols="25"v-model="address"placeholder="address"></textarea>
     <br><br>
-    <textarea name="phone" rows="1" cols="25"v-model="phone">Phone</textarea>
+    <textarea name="phone" rows="1" cols="25"v-model="phone"placeholder="phone"></textarea>
     <br><br>
-    <textarea name="fax" rows="1" cols="25" v-model="fax">Fax</textarea>
+    <textarea name="fax" rows="1" cols="25" v-model="fax" placeholder="Fax"></textarea>
     <br><br>
-    <textarea name="email" rows="1" cols="25" v-model="email">Email</textarea>
+    <textarea name="email" rows="1" cols="25" v-model="email" placeholder="Email"></textarea>
     <br><br>
     <div class="btn-group btn-group-toggle" data-toggle="buttons" v-model="package">
       <label class="btn btn-secondary active">
