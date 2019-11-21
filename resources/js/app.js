@@ -32,7 +32,20 @@ Vue.component('companybio',{
     <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
 
   </form>
-  `
+  `,
+  methods: {
+    addService(service){
+      var service = this;
+      axios({
+        method: 'post',
+        url: '/add'
+        data: service,
+      }).then(function(response){
+        var_dump($methods);
+        die();
+      })
+    }
+  }
 
 });
 new Vue({
