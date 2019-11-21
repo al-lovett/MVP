@@ -29,25 +29,39 @@ Vue.component('companybio',{
         <input type="radio" name="package" id="3" autocomplete="off"> Package 3
           </label>
     </div>
-    <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
+    <a href="@click="$emit('serviceAdded', newService)"#" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
 
   </form>
   `,
+  data(){
+    return {
+        newService: {
+            company_name: "",
+            contact_name: "",
+            address: "",
+            phone: "",
+            fax: "",
+            email: "",
+            package: 1,
+        }
+    }
+}
+})
   methods: {
-    addService(service){
+    addService(service);{
       var service = this;
       axios({
         method: 'post',
-        url: '/add'
-        data: service,
+        url: '/add',
+        data: service
       }).then(function(response){
         var_dump($methods);
         die();
-      })
-    }
-  }
+      });
 
-});
+
+
+
 new Vue({
     el: '#app',
 
