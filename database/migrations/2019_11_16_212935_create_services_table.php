@@ -21,6 +21,8 @@ class CreateServicesTable extends Migration
             $table->string('phone');
             $table->string('fax');
             $table->string('email');
+            $table->string('package');
+            $table->string('additionalNotes');
             $table->rememberToken();
             $table->timestamps();
         });

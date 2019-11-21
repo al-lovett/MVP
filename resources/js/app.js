@@ -18,19 +18,11 @@ Vue.component('companybio',{
     <br><br>
     <textarea name="email" rows="1" cols="25" v-model="newService.email" placeholder="Email"></textarea>
     <br><br>
-    <div data-toggle="buttons">
-      <label for="one">
-        <input class="package-radios" type="radio" name="package" id="one" value="1"  v-model="newService.package" > Package 1
-          </label>
-      <label for="two">
-        <input class="package-radios" type="radio" name="package" id="two" value="2" v-model="newService.package" > Package 2
-          </label>
-      <label for="three">
-        <input class="package-radios" type="radio" name="package" id="three" value="3"  v-model="newService.package" > Package 3
-          </label>
-    </div>
-    <a href="/add" @click="$emit('serviceAdded', newService)" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
-
+    <textarea name="package" rows="1" cols="25" v-model="newService.package" placeholder="Package"></textarea>
+    <br><br>
+    <textarea name="additionalNotes" rows="2" cols="25" v-model="newService.additionalNotes" placeholder="Additional Notes"></textarea>
+    <br><br>
+    <button type="button" class="btn btn-primary" @click="addService(newService)">Submit</button>
   </form>
   `,
   data(){
@@ -42,21 +34,20 @@ Vue.component('companybio',{
             phone: "",
             fax: "",
             email: "",
-            package: "1",
+            package: "",
         }
     }
 },
 
   methods: {
     addService(service){
-      var service = this;
       axios({
         method: 'post',
         url: '/add',
         data: service,
       }).then(function(response){
-        var_dump($methods);
-        die();
+        console.log(response)
+
       })
     }
   }

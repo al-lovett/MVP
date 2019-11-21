@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Service
+use App\Service;
 
 class ServicesController extends Controller
 {
@@ -24,15 +24,16 @@ class ServicesController extends Controller
      */
     public function create(Request $request)
     {
-      $quote = new Quote;
-      $quote->company_name = $request->company_name;
-      $quote->contact_name = $request->contact_name;
-      $quote->address = $request->address;
-      $quote->phone = $request->phone;
-      $quote->fax = $request->fax;
-      $quote->email = $request->email;
-      $quote->package = $request->package;
-      $quote->save()
+      $service = new Service;
+      $service->company_name = $request->company_name;
+      $service->contact_name = $request->contact_name;
+      $service->address = $request->address;
+      $service->phone = $request->phone;
+      $service->fax = $request->fax;
+      $service->email = $request->email;
+      $service->package = $request->package;
+      $service->additionalNotes =$request->additionalNotes;
+      $service->save();
     }
 
     /**

@@ -49160,7 +49160,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 Vue.component('companybio', {
-  template: "\n  <form >\n    <textarea name=\"company_name\" rows=\"1\" cols=\"25\" v-model=\"newService.company_name\" placeholder=\"Company Name\"></textarea>\n    <br><br>\n    <textarea name=\"contact_name\" rows=\"1\" cols=\"25\" v-model=\"newService.contact_name\" placeholder=\"Contact Name\"></textarea>\n    <br><br>\n    <textarea name=\"address\" rows=\"1\" cols=\"25\" v-model=\"newService.address\" placeholder=\"address\"></textarea>\n    <br><br>\n    <textarea name=\"phone\" rows=\"1\" cols=\"25\" v-model=\"newService.phone\" placeholder=\"phone\"></textarea>\n    <br><br>\n    <textarea name=\"fax\" rows=\"1\" cols=\"25\" v-model=\"newService.fax\" placeholder=\"Fax\"></textarea>\n    <br><br>\n    <textarea name=\"email\" rows=\"1\" cols=\"25\" v-model=\"newService.email\" placeholder=\"Email\"></textarea>\n    <br><br>\n    <div data-toggle=\"buttons\">\n      <label for=\"one\">\n        <input class=\"package-radios\" type=\"radio\" name=\"package\" id=\"one\" value=\"1\"  v-model=\"newService.package\" > Package 1\n          </label>\n      <label for=\"two\">\n        <input class=\"package-radios\" type=\"radio\" name=\"package\" id=\"two\" value=\"2\" v-model=\"newService.package\" > Package 2\n          </label>\n      <label for=\"three\">\n        <input class=\"package-radios\" type=\"radio\" name=\"package\" id=\"three\" value=\"3\"  v-model=\"newService.package\" > Package 3\n          </label>\n    </div>\n    <a href=\"/add\" @click=\"$emit('serviceAdded', newService)\" class=\"btn btn-primary btn-lg\" tabindex=\"-1\" role=\"button\">Submit</a>\n\n  </form>\n  ",
+  template: "\n  <form >\n    <textarea name=\"company_name\" rows=\"1\" cols=\"25\" v-model=\"newService.company_name\" placeholder=\"Company Name\"></textarea>\n    <br><br>\n    <textarea name=\"contact_name\" rows=\"1\" cols=\"25\" v-model=\"newService.contact_name\" placeholder=\"Contact Name\"></textarea>\n    <br><br>\n    <textarea name=\"address\" rows=\"1\" cols=\"25\" v-model=\"newService.address\" placeholder=\"address\"></textarea>\n    <br><br>\n    <textarea name=\"phone\" rows=\"1\" cols=\"25\" v-model=\"newService.phone\" placeholder=\"phone\"></textarea>\n    <br><br>\n    <textarea name=\"fax\" rows=\"1\" cols=\"25\" v-model=\"newService.fax\" placeholder=\"Fax\"></textarea>\n    <br><br>\n    <textarea name=\"email\" rows=\"1\" cols=\"25\" v-model=\"newService.email\" placeholder=\"Email\"></textarea>\n    <br><br>\n    <textarea name=\"package\" rows=\"1\" cols=\"25\" v-model=\"newService.package\" placeholder=\"Package\"></textarea>\n    <br><br>\n    <textarea name=\"additionalNotes\" rows=\"2\" cols=\"25\" v-model=\"newService.additionalNotes\" placeholder=\"Additional Notes\"></textarea>\n    <br><br>\n    <button type=\"button\" class=\"btn btn-primary\" @click=\"addService(newService)\">Submit</button>\n  </form>\n  ",
   data: function data() {
     return {
       newService: {
@@ -49170,20 +49170,18 @@ Vue.component('companybio', {
         phone: "",
         fax: "",
         email: "",
-        "package": "1"
+        "package": ""
       }
     };
   },
   methods: {
     addService: function addService(service) {
-      var service = this;
       axios({
         method: 'post',
         url: '/add',
         data: service
       }).then(function (response) {
-        var_dump($methods);
-        die();
+        console.log(response);
       });
     }
   }
