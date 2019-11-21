@@ -53,7 +53,7 @@ Vue.component('companybio',{
       axios({
         method: 'post',
         url: '/add',
-        data: service
+        data: service,
       }).then(function(response){
         var_dump($methods);
         die();
@@ -61,7 +61,7 @@ Vue.component('companybio',{
     }
   }
 
-});
+
 new Vue({
     el: '#app',
 
