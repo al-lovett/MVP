@@ -49181,7 +49181,7 @@ Vue.component('companybio', {
         url: '/add',
         data: service
       }).then(function (response) {
-        console.log(response);
+        window.location = '/home';
       });
     }
   }

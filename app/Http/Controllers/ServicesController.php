@@ -34,6 +34,7 @@ class ServicesController extends Controller
       $service->package = $request->package;
       $service->additionalNotes =$request->additionalNotes;
       $service->save();
+      
     }
 
     /**
