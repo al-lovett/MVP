@@ -57,11 +57,11 @@ Vue.component('companybio',{
       }).then(function(response){
         var_dump($methods);
         die();
-      });
+      })
+    }
+  }
 
-
-
-
+});
 new Vue({
     el: '#app',
 
