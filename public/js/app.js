@@ -49160,7 +49160,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 Vue.component('companybio', {
-  template: "\n  <form>\n    <textarea name=\"company_name\" rows=\"1\" cols=\"25\" v-model=\"company_name\" placeholder=\"Company Name\"></textarea>\n    <br><br>\n    <textarea name=\"contact_name\" rows=\"1\" cols=\"25\" v-model=\"contact_name\" placeholder=\"Contact Name\"></textarea>\n    <br><br>\n    <textarea name=\"address\" rows=\"1\" cols=\"25\"v-model=\"address\"placeholder=\"address\"></textarea>\n    <br><br>\n    <textarea name=\"phone\" rows=\"1\" cols=\"25\"v-model=\"phone\"placeholder=\"phone\"></textarea>\n    <br><br>\n    <textarea name=\"fax\" rows=\"1\" cols=\"25\" v-model=\"fax\" placeholder=\"Fax\"></textarea>\n    <br><br>\n    <textarea name=\"email\" rows=\"1\" cols=\"25\" v-model=\"email\" placeholder=\"Email\"></textarea>\n    <br><br>\n    <div class=\"btn-group btn-group-toggle\" data-toggle=\"buttons\" v-model=\"package\">\n      <label class=\"btn btn-secondary active\">\n        <input type=\"radio\" name=\"package\" id=\"1\" autocomplete=\"off\" checked> Package 1\n          </label>\n      <label class=\"btn btn-secondary\">\n        <input type=\"radio\" name=\"package\" id=\"2\" autocomplete=\"off\"> Package 2\n          </label>\n      <label class=\"btn btn-secondary\">\n        <input type=\"radio\" name=\"package\" id=\"3\" autocomplete=\"off\"> Package 3\n          </label>\n    </div>\n    <a href=\"@click=\"$emit('serviceAdded', newService)\"#\" class=\"btn btn-primary btn-lg\" tabindex=\"-1\" role=\"button\">Submit</a>\n\n  </form>\n  ",
+  template: "\n  <form >\n    <textarea name=\"company_name\" rows=\"1\" cols=\"25\" v-model=\"newService.company_name\" placeholder=\"Company Name\"></textarea>\n    <br><br>\n    <textarea name=\"contact_name\" rows=\"1\" cols=\"25\" v-model=\"newService.contact_name\" placeholder=\"Contact Name\"></textarea>\n    <br><br>\n    <textarea name=\"address\" rows=\"1\" cols=\"25\" v-model=\"newService.address\" placeholder=\"address\"></textarea>\n    <br><br>\n    <textarea name=\"phone\" rows=\"1\" cols=\"25\" v-model=\"newService.phone\" placeholder=\"phone\"></textarea>\n    <br><br>\n    <textarea name=\"fax\" rows=\"1\" cols=\"25\" v-model=\"newService.fax\" placeholder=\"Fax\"></textarea>\n    <br><br>\n    <textarea name=\"email\" rows=\"1\" cols=\"25\" v-model=\"newService.email\" placeholder=\"Email\"></textarea>\n    <br><br>\n    <div data-toggle=\"buttons\">\n      <label for=\"one\">\n        <input class=\"package-radios\" type=\"radio\" name=\"package\" id=\"one\" value=\"1\"  v-model=\"newService.package\" > Package 1\n          </label>\n      <label for=\"two\">\n        <input class=\"package-radios\" type=\"radio\" name=\"package\" id=\"two\" value=\"2\" v-model=\"newService.package\" > Package 2\n          </label>\n      <label for=\"three\">\n        <input class=\"package-radios\" type=\"radio\" name=\"package\" id=\"three\" value=\"3\"  v-model=\"newService.package\" > Package 3\n          </label>\n    </div>\n    <a href=\"/add\" @click=\"$emit('serviceAdded', newService)\" class=\"btn btn-primary btn-lg\" tabindex=\"-1\" role=\"button\">Submit</a>\n\n  </form>\n  ",
   data: function data() {
     return {
       newService: {
@@ -49170,27 +49170,24 @@ Vue.component('companybio', {
         phone: "",
         fax: "",
         email: "",
-        "package": 1
+        "package": "1"
       }
     };
+  },
+  methods: {
+    addService: function addService(service) {
+      var service = this;
+      axios({
+        method: 'post',
+        url: '/add',
+        data: service
+      }).then(function (response) {
+        var_dump($methods);
+        die();
+      });
+    }
   }
 });
-
-methods: {
-  addService(service);
-  {
-    var service = this;
-    axios({
-      method: 'post',
-      url: '/add',
-      data: service
-    }).then(function (response) {
-      var_dump($methods);
-      die();
-    });
-  }
-}
-
 new Vue({
   el: '#app'
 });

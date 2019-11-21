@@ -5,31 +5,31 @@ window.Vue = require('vue');
 
 Vue.component('companybio',{
   template: `
-  <form>
-    <textarea name="company_name" rows="1" cols="25" v-model="company_name" placeholder="Company Name"></textarea>
+  <form >
+    <textarea name="company_name" rows="1" cols="25" v-model="newService.company_name" placeholder="Company Name"></textarea>
     <br><br>
-    <textarea name="contact_name" rows="1" cols="25" v-model="contact_name" placeholder="Contact Name"></textarea>
+    <textarea name="contact_name" rows="1" cols="25" v-model="newService.contact_name" placeholder="Contact Name"></textarea>
     <br><br>
-    <textarea name="address" rows="1" cols="25"v-model="address"placeholder="address"></textarea>
+    <textarea name="address" rows="1" cols="25" v-model="newService.address" placeholder="address"></textarea>
     <br><br>
-    <textarea name="phone" rows="1" cols="25"v-model="phone"placeholder="phone"></textarea>
+    <textarea name="phone" rows="1" cols="25" v-model="newService.phone" placeholder="phone"></textarea>
     <br><br>
-    <textarea name="fax" rows="1" cols="25" v-model="fax" placeholder="Fax"></textarea>
+    <textarea name="fax" rows="1" cols="25" v-model="newService.fax" placeholder="Fax"></textarea>
     <br><br>
-    <textarea name="email" rows="1" cols="25" v-model="email" placeholder="Email"></textarea>
+    <textarea name="email" rows="1" cols="25" v-model="newService.email" placeholder="Email"></textarea>
     <br><br>
-    <div class="btn-group btn-group-toggle" data-toggle="buttons" v-model="package">
-      <label class="btn btn-secondary active">
-        <input type="radio" name="package" id="1" autocomplete="off" checked> Package 1
+    <div data-toggle="buttons">
+      <label for="one">
+        <input class="package-radios" type="radio" name="package" id="one" value="1"  v-model="newService.package" > Package 1
           </label>
-      <label class="btn btn-secondary">
-        <input type="radio" name="package" id="2" autocomplete="off"> Package 2
+      <label for="two">
+        <input class="package-radios" type="radio" name="package" id="two" value="2" v-model="newService.package" > Package 2
           </label>
-      <label class="btn btn-secondary">
-        <input type="radio" name="package" id="3" autocomplete="off"> Package 3
+      <label for="three">
+        <input class="package-radios" type="radio" name="package" id="three" value="3"  v-model="newService.package" > Package 3
           </label>
     </div>
-    <a href="@click="$emit('serviceAdded', newService)"#" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
+    <a href="/add" @click="$emit('serviceAdded', newService)" class="btn btn-primary btn-lg" tabindex="-1" role="button">Submit</a>
 
   </form>
   `,
@@ -42,13 +42,13 @@ Vue.component('companybio',{
             phone: "",
             fax: "",
             email: "",
-            package: 1,
+            package: "1",
         }
     }
-}
-})
+},
+
   methods: {
-    addService(service);{
+    addService(service){
       var service = this;
       axios({
         method: 'post',
@@ -60,7 +60,7 @@ Vue.component('companybio',{
       })
     }
   }
-
+});
 
 new Vue({
     el: '#app',
