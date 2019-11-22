@@ -35,3 +35,7 @@ Route::get('/pk3', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/dynamic_pdf', 'DynamicPDFController@index');
+
+Route::get('/dynamic_pdf/pdf', 'DynamicPDFController@pdf');
