@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Service;
+use PDF;
 
 class ServicesController extends Controller
 {
@@ -34,7 +35,7 @@ class ServicesController extends Controller
       $service->package = $request->package;
       $service->additionalNotes =$request->additionalNotes;
       $service->save();
-      
+
     }
 
     /**
