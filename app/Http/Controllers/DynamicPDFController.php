@@ -17,7 +17,7 @@ class DynamicPDFController extends Controller
     public function get_customer_data(){
 
       $customer_data = DB::table('services')
-                        ->limit(1)
+                        ->limit(10)
                         ->get();
         return $customer_data;
     }
@@ -62,4 +62,8 @@ class DynamicPDFController extends Controller
      $output .= '</table>';
      return $output;
     }
+    public function show($id)
+      {
+    return view('/dynamic_pdf/{id}', $id);
+      }
 }
