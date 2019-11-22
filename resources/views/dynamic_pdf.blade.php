@@ -23,6 +23,8 @@
     </div>
     <div class="col-md-5" align="right">
      <a href="{{ url('dynamic_pdf/pdf') }}" class="btn btn-danger">Convert into PDF</a>
+     <br>
+     <a href="{{ url('home') }}" class="btn btn-danger">Back To Home Page</a>
     </div>
    </div>
    <br />
@@ -43,10 +45,10 @@
      <tbody>
      @foreach($customer_data as $sevices)
       <tr>
-       <td>{{ $sevices->customer_name }}</td>
+       <td>{{ $sevices->company_name }}</td>
        <td>{{ $sevices->contact_name }}</td>
        <td>{{ $sevices->address }}</td>
-       <td>{{ $sevices->Phone }}</td>
+       <td>{{ $sevices->phone }}</td>
        <td>{{ $sevices->fax }}</td>
        <td>{{ $sevices->email }}</td>
        <td>{{ $sevices->package }}</td>

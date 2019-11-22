@@ -29,6 +29,7 @@
           <h5 class="card-title">Company Bio "Smell My Feet"</h5>
           <p class="card-text">Quick Company Bio for Foot Service Customers.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <a href="/addcompany" class="btn btn-primary">Customer Quote or Billing Orders</a>
+          <a href="/dynamic_pdf" class="btn btn-primary">Get PDF Printout</a>
         </div>
       </div>
       <div class="card">

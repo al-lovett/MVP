@@ -10,13 +10,13 @@ class DynamicPDFController extends Controller
 {
     public function index(){
 
-      $customer_data = this->get_customer_data();
+      $customer_data =$this->get_customer_data();
       return view('dynamic_pdf')->with('customer_data', $customer_data);
     }
 
     public function get_customer_data(){
 
-      $customer_data = DB::table('tbl_services')
+      $customer_data = DB::table('services')
                         ->limit(1)
                         ->get();
         return $customer_data;
@@ -44,23 +44,22 @@ class DynamicPDFController extends Controller
     <th style="border: 1px solid; padding:12px;" width="20%">Additional Notes</th>
    </tr>
      ';
-     foreach($customer_data as $services)
+     foreach($customer_data as $service)
      {
       $output .= '
       <tr>
-       <td style="border: 1px solid; padding:12px;">'.$service->Company_Name.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$service->Contact_Name.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$service->Address.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$service->Phone.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$service->Fax.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$service->Email.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$service->Package.'</td>
-       <td style="border: 1px solid; padding:12px;">'.$service->AdditionalNotes.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->company_name.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->contact_name.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->address.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->phone.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->fax.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->email.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->package.'</td>
+       <td style="border: 1px solid; padding:12px;">'.$service->additionalNotes.'</td>
       </tr>
       ';
      }
      $output .= '</table>';
      return $output;
     }
-}
 }
