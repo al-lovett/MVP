@@ -30,11 +30,14 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    YouBiz
+            <div class="">
+              <img src="images/bare-feet.jpg">
+                <div class="text align center">
+                    <h2> YouBiz </h2>
+                    <p> If you are a small business who needs to quote and <br> or Invoice quickly.
+                    Within a few seconds to input your customers data.<br> A PDF can be generated and emailed
+                    right off of your phone. </p>
                 </div>
-
 
             </div>
         </div>
